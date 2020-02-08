@@ -1,28 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .App {
+  width: 600px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App > h1 {
+  margin: 0 0 20px 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.smurfs-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.App-title {
-  font-size: 1.5em;
+.smurf {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  border: 1px solid #ccc;
+  margin: 0 0 10px 0;
+  border-radius: 15px;
 }
 
-.App-intro {
-  font-size: large;
+.smurf h3 {
+  padding: 7px 0 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.smurf > p {
+  padding: 5px 0 10px 0;
+}
+
+.smurf .action-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.smurf .action-buttons a {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.smurf .action-buttons a:first-child {
+  background: skyblue;
+  border-bottom-left-radius: 10px;
+}
+
+.smurf .action-buttons a:last-child {
+  background: pink;
+  border-bottom-right-radius: 10px;
+}
+
+.new {
+  background: #eee;
+  border-radius: 15px;
+  height: 100%;
+  padding: 15px 0 0 0;
+}
+
+.new span {
+  font-size: 50px;
+  color: #777;
+}
+
+form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+form label input,
+form button {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+form label input {
+  width: 80%;
+  line-height: 30px;
+  padding: 0 0 0 10px;
+}
+
+form button {
+  height: 30px;
+  margin: 10px 0 0 0;
 }

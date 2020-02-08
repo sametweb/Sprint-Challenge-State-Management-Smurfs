@@ -2,22 +2,18 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../utils/actions";
 import Smurf from "./Smurf";
-import { Link } from "react-router-dom";
 
 const SmurfsList = props => {
-  const { fetchSmurfs } = props;
   useEffect(() => {
-    fetchSmurfs();
-  }, [fetchSmurfs]);
+    props.fetchSmurfs();
+  }, []);
 
   return (
-    <div>
-      <Link to="/add">
-        <h4>Add New Smurf</h4>
-      </Link>
+    <div className="smurfs-list">
       {props.smurfs.map(smurf => (
         <Smurf key={smurf.id} smurf={smurf} />
       ))}
+      <Smurf new />
     </div>
   );
 };
